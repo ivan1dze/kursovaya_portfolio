@@ -194,7 +194,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-portfolio {
   width: 100%;
-  height: 100vh;
   background-color: #000000;
   padding: 100px 20px 0 20px;
 }
@@ -269,5 +268,55 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   display: block;
 }
+
+.section-video {
+  width: 100%;
+  background-color: #000000;
+  padding: 100px 20px 0 20px;
+}
+.video-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #BDAE82;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  position: relative;
+}
+
+.video-title:before,
+.video-title:after {
+  content: "";
+  color: #BDAE82;
+  display: inline-block;
+  margin: 0 10px;
+  border-bottom: 2px solid #BDAE82;
+  width: 15%;
+}
+
+.video-image img {
+  width: 100%;
+  position: relative;
+}
+
+.video-image:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/svg/play_hover.svg");
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  display: block;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
 
 
