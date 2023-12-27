@@ -1,0 +1,1 @@
+{"mappings":"AAAA;EACI","sources":["css/adaptive.css"],"sourcesContent":["@media (max-width: 1200px) {\r\n    body {\r\n        background-color: green;\r\n    }\r\n}"],"names":[],"version":3,"file":"index.5f588bdd.css.map","sourceRoot":"/__parcel_source_root/"}
