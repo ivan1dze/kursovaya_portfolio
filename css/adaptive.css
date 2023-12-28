@@ -40,13 +40,13 @@
     .section-portfolio .portfolio-photos {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-        grid-gap: 20px; /* Отступ между изображениями */
+        grid-gap: 20px;
     }
 
     .section-portfolio .portfolio-photo {
         width: 100%;
-        text-align: center; /* Центрирование содержимого */
-        margin-bottom: 20px; /* Отступ между изображениями */
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .section-portfolio .portfolio-photo img {
@@ -54,12 +54,11 @@
         height: auto;
         max-width: 450px;
         max-height: 560px;
-        display: inline-block !important; /* Убираем ненужные пробелы под изображениями */
+        display: inline-block !important;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    /* Global styles */
     .header {
         padding: 20px 10px 0 10px;
     }
@@ -102,13 +101,13 @@
     .section-portfolio .portfolio-photos {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-        grid-gap: 20px; /* Отступ между изображениями */
+        grid-gap: 20px;
     }
 
     .section-portfolio .portfolio-photo {
         width: 100%;
-        text-align: center; /* Центрирование содержимого */
-        margin-bottom: 20px; /* Отступ между изображениями */
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .section-portfolio .portfolio-photo img {
@@ -116,12 +115,12 @@
         height: auto;
         max-width: 450px;
         max-height: 560px;
-        display: inline-block !important; /* Убираем ненужные пробелы под изображениями */
+        display: inline-block !important;
     }
     .section-price .price-items {
         flex-direction: column;
         align-items: center;
-        /* Установка направления flex-контейнера в столбец */
+
     }
 
     .section-price .price-item {
@@ -144,7 +143,6 @@
         display: inline-block !important;
     }
 
-    /* Стили для футера */
     .footer {
         width: 100%;
         background: black;
@@ -182,21 +180,20 @@
 
 }
 
-/* Добавьте этот медиа-запрос в конец вашего CSS-кода */
 @media only screen and (max-width: 674px) {
     .header .header-inner {
         flex-wrap: wrap;
-        align-items: center; /* Центрирование элементов по вертикали */
+        align-items: center;
     }
 
     .nav {
         text-align: right;
-        width: 80%; /* Занимает всю доступную ширину */
+        width: 80%;
     }
 
     .nav .nav_link {
-        display: block; /* Делаем ссылки блочными элементами */
-        margin-bottom: 10px; /* Добавляем маргин снизу для создания пространства между ссылками */
+        display: block;
+        margin-bottom: 10px;
     }
 }
 
@@ -204,9 +201,8 @@
     #email,
     #phone,
     #message {
-        max-width: 100%; /* Максимальная ширина 100% */
-        padding: 10px; /* При необходимости, уменьшите внутренний отступ */
-
+        max-width: 100%;
+        padding: 10px;
     }
 }
 
