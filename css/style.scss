@@ -1,3 +1,21 @@
+/* Mixins for colors */
+@mixin primary-colors {
+  color: #BDAE82;
+}
+
+@mixin secondary-colors {
+  color: #FFF;
+}
+
+/* Mixins for fonts */
+@mixin font-inter {
+  font-family: 'Inter', serif;
+}
+
+@mixin font-merriweather {
+  font-family: 'Merriweather', serif;
+}
+
 /* Font faces */
 @font-face {
   font-display: swap;
@@ -24,7 +42,6 @@
 }
 
 /* Global styles */
-
 body {
   margin: 0;
 }
@@ -40,7 +57,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header styles */
-
 .header {
   width: 100%;
   position: absolute;
@@ -57,9 +73,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .logo {
     width: 50px;
-    height: 50px;
+    height: 45px;
     background-image: url("../img/svg/logo.svg");
-    background-size: contain;
     transition: background-image 0.2s linear;
 
     &:hover {
@@ -68,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav {
-    font-family: Inter, serif;
+    @include font-inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -78,23 +93,22 @@ h1, h2, h3, h4, h5, h6 {
       display: inline-block;
       vertical-align: top;
       margin: 0 15px;
-      color: #FFF;
+      @include secondary-colors;
       text-decoration: none;
       transition: color 0.2s linear;
 
       &:hover {
-        color: #BDAE82;
+        @include primary-colors;
       }
     }
 
     .default-language {
-      color: #BDAE82;
+      @include primary-colors;
     }
   }
 }
 
 /* Intro section styles */
-
 .intro {
   width: 100%;
   height: 100vh;
@@ -110,19 +124,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 80px;
 
   .hero-title {
-    color: #FFF;
-    font-family: Merriweather, serif;
+    @include secondary-colors;
+    @include font-merriweather;
     font-size: 60px;
-    font-style: normal;
     font-weight: 700;
     line-height: 120px;
   }
 
   .hero-text {
-    color: #FFF;
-    font-family: Inter, serif;
+    @include secondary-colors;
+    @include font-inter;
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
     line-height: 40px;
   }
@@ -139,9 +151,8 @@ h1, h2, h3, h4, h5, h6 {
     .intro-btn-text {
       color: #000;
       text-align: center;
-      font-family: Inter, serif;
+      @include font-inter;
       font-size: 20px;
-      font-style: normal;
       font-weight: 400;
       line-height: 40px;
       transition: color 0.2s linear;
@@ -154,7 +165,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Skills section styles */
-
 .section-skills {
   width: 100%;
   background-color: #000000;
@@ -164,11 +174,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #BDAE82;
+    @include primary-colors;
     text-align: center;
-    font-family: 'Merriweather', serif;
+    @include font-merriweather;
     font-size: 40px;
-    font-style: normal;
     font-weight: 700;
     line-height: 80px;
     position: relative;
@@ -176,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     &:before,
     &:after {
       content: "";
-      color: #BDAE82;
+      @include primary-colors;
       display: inline-block;
       margin: 0 10px;
       border-bottom: 2px solid #BDAE82;
@@ -205,21 +214,19 @@ h1, h2, h3, h4, h5, h6 {
     .skills-item-title {
       padding: 50px 20px 0 20px;
       text-align: center;
-      color: #FFF;
-      font-family: Inter, serif;
+      @include secondary-colors;
+      @include font-inter;
       font-size: 20px;
-      font-style: normal;
       font-weight: 700;
       line-height: 40px;
     }
 
     .skills-item-subtitle {
       padding: 20px 20px 0 20px;
-      color: #FFF;
+      @include secondary-colors;
       text-align: center;
-      font-family: Inter, serif;
+      @include font-inter;
       font-size: 18px;
-      font-style: normal;
       font-weight: 400;
       line-height: 36px;
     }
@@ -227,7 +234,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Portfolio section styles */
-
 .section-portfolio {
   width: 100%;
   background-color: #000000;
@@ -237,11 +243,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #BDAE82;
+    @include primary-colors;
     text-align: center;
-    font-family: 'Merriweather', serif;
+    @include font-merriweather;
     font-size: 40px;
-    font-style: normal;
     font-weight: 700;
     line-height: 80px;
     position: relative;
@@ -249,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
     &:before,
     &:after {
       content: "";
-      color: #BDAE82;
+      @include primary-colors;
       display: inline-block;
       margin: 0 10px;
       border-bottom: 2px solid #BDAE82;
@@ -276,11 +281,10 @@ h1, h2, h3, h4, h5, h6 {
       }
 
       .portfolio-btn-text {
-        color: #BDAE82;
+        @include primary-colors;
         text-align: center;
-        font-family: Inter, serif;
+        @include font-inter;
         font-size: 20px;
-        font-style: normal;
         font-weight: 400;
         line-height: 40px;
         transition: color 0.2s linear;
@@ -319,7 +323,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Video section styles */
-
 .section-video {
   width: 100%;
   background-color: #000000;
@@ -329,11 +332,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #BDAE82;
+    @include primary-colors;
     text-align: center;
-    font-family: 'Merriweather', serif;
+    @include font-merriweather;
     font-size: 40px;
-    font-style: normal;
     font-weight: 700;
     line-height: 80px;
     position: relative;
@@ -341,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
     &:before,
     &:after {
       content: "";
-      color: #BDAE82;
+      @include primary-colors;
       display: inline-block;
       margin: 0 10px;
       border-bottom: 2px solid #BDAE82;
@@ -380,7 +382,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Price section styles */
-
 .section-price {
   width: 100%;
   background-color: #000000;
@@ -390,11 +391,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #BDAE82;
+    @include primary-colors;
     text-align: center;
-    font-family: 'Merriweather', serif;
+    @include font-merriweather;
     font-size: 40px;
-    font-style: normal;
     font-weight: 700;
     line-height: 80px;
     position: relative;
@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
     &:before,
     &:after {
       content: "";
-      color: #BDAE82;
+      @include primary-colors;
       display: inline-block;
       margin: 0 10px;
       border-bottom: 2px solid #BDAE82;
@@ -426,11 +426,10 @@ h1, h2, h3, h4, h5, h6 {
       .price-item-title {
         padding-top: 43px;
         width: 100%;
-        color: #FFF;
+        @include secondary-colors;
         text-align: center;
-        font-family: Merriweather, serif;
+        @include font-merriweather;
         font-size: 28px;
-        font-style: normal;
         font-weight: 700;
         line-height: 56px;
       }
@@ -438,11 +437,10 @@ h1, h2, h3, h4, h5, h6 {
       .price-item-price {
         padding: 20px 0 20px 0;
         width: 100%;
-        color: #BDAE82;
+        @include primary-colors;
         text-align: center;
-        font-family: Merriweather, serif;
+        @include font-merriweather;
         font-size: 24px;
-        font-style: normal;
         font-weight: 700;
         line-height: 48px;
       }
@@ -450,11 +448,10 @@ h1, h2, h3, h4, h5, h6 {
       .price-item-text {
         width: 100%;
         padding: 20px 20px 0 20px;
-        color: #FFF;
+        @include secondary-colors;
         text-align: center;
-        font-family: Inter, serif;
+        @include font-inter;
         font-size: 18px;
-        font-style: normal;
         font-weight: 400;
         line-height: 36px;
       }
@@ -475,9 +472,8 @@ h1, h2, h3, h4, h5, h6 {
           .price-btn-text {
             color: #000;
             text-align: center;
-            font-family: Inter, serif;
+            @include font-inter;
             font-size: 20px;
-            font-style: normal;
             font-weight: 400;
             line-height: 40px;
             transition: color 0.2s linear;
@@ -493,7 +489,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Contact section styles */
-
 .contact {
   width: 100%;
   height: 100vh;
@@ -506,10 +501,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .contact-title {
       width: 100%;
-      color: #BDAE82;
-      font-family: Merriweather, sans-serif;
+      @include primary-colors;
+      @include font-merriweather;
       font-size: 40px;
-      font-style: normal;
       font-weight: 700;
       line-height: 80px;
       padding-bottom: 20px;
@@ -523,10 +517,9 @@ h1, h2, h3, h4, h5, h6 {
       padding-right: 0;
       background: rgba(0, 0, 0, 0.5);
       border: 2px solid #BDAE82;
-      color: #BDAE82;
-      font-family: Inter, serif;
+      @include primary-colors;
+      @include font-inter;
       font-size: 15px;
-      font-style: normal;
       font-weight: 400;
       line-height: 30px;
       margin-bottom: 20px;
@@ -542,10 +535,9 @@ h1, h2, h3, h4, h5, h6 {
       padding: 10px 15px;
       background: rgba(0, 0, 0, 0.5);
       border: 2px solid #BDAE82;
-      color: #BDAE82;
-      font-family: Inter, serif;
+      @include primary-colors;
+      @include font-inter;
       font-size: 15px;
-      font-style: normal;
       font-weight: 400;
       min-height: 80px;
       margin-bottom: 20px;
@@ -554,123 +546,116 @@ h1, h2, h3, h4, h5, h6 {
       &::placeholder {
         color: #BDAE82;
       }
-    }
 
-    #message::placeholder {
-      color: #BDAE82;
+      #message::placeholder {
+        color: #BDAE82;
+      }
     }
-
 
     .contact-btn {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 220px;
-      height: 55px;
-      padding: 7.5px 0 7.5px 0;
-      background: #BDAE82;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 220px;
+        height: 55px;
+        padding: 7.5px 0 7.5px 0;
+        background: #BDAE82;
 
-      .contact-btn-text {
-        color: #000;
-        text-align: center;
-        font-family: Inter, serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 200;
-        line-height: 40px;
-        transition: color 0.2s linear;
+        .contact-btn-text {
+          color: #000;
+          text-align: center;
+          @include font-inter;
+          font-size: 18px;
+          font-weight: 200;
+          line-height: 40px;
+          transition: color 0.2s linear;
 
-        &:hover {
-          color: #ffffff;
+          &:hover {
+            color: #ffffff;
+          }
         }
       }
     }
   }
-}
-
-/* Footer section styles */
-
-.footer {
-  width: 100%;
-  background: black;
-
-  .footer-inner {
+  .footer {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 20px 50px 20px;
+    background: black;
 
-    .copyright {
+    .footer-inner {
+      width: 100%;
       display: flex;
-      width: 20%;
-      align-items: center;
+      justify-content: space-between;
+      padding: 50px 20px 50px 20px;
 
-      .copyright-text {
-        padding-left: 0;
-        padding-right: 20px;
+      .copyright {
+        display: flex;
+        width: 20%;
+        align-items: center;
+
+        .copyright-text {
+          padding-left: 0;
+          padding-right: 20px;
+          color: #FFF;
+          @include font-inter;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 50px;
+        }
+      }
+
+      .about {
+        display: flex;
+        width: 210px;
+        justify-content: center;
         color: #FFF;
-        font-family: Inter, serif;
+        @include font-inter;
         font-size: 20px;
-        font-style: normal;
         font-weight: 400;
         line-height: 50px;
       }
-    }
 
-    .about {
-      display: flex;
-      width: 210px;
-      justify-content: center;
-      color: #FFF;
-      font-family: Inter, serif;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 50px;
-    }
+      .soc-links {
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 0;
 
-    .soc-links {
-      display: flex;
-      width: 20%;
-      justify-content: space-between;
-      align-items: center;
-      padding: 9px 0;
-
-      #inst-link:hover img {
-        content: url("../img/svg/insthover.svg");
-      }
-
-      #fb-link:hover img {
-        content: url("../img/svg/fbhover.svg");
-      }
-
-      #tw-link:hover img {
-        content: url("../img/svg/twhover.svg");
-      }
-
-      #pinterest-link:hover img {
-        content: url("../img/svg/pinteresthover.svg");
-      }
-
-      .logo img {
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.2);
+        #inst-link:hover img {
+          content: url("../img/svg/insthover.svg");
         }
-      }
 
-      #inst-link img,
-      #fb-link img,
-      #tw-link img,
-      #pinterest-link img {
-        transition: transform 0.3s ease-in-out;
+        #fb-link:hover img {
+          content: url("../img/svg/fbhover.svg");
+        }
 
-        &:hover {
-          transform: scale(1.2);
+        #tw-link:hover img {
+          content: url("../img/svg/twhover.svg");
+        }
+
+        #pinterest-link:hover img {
+          content: url("../img/svg/pinteresthover.svg");
+        }
+
+        .logo img {
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        #inst-link img,
+        #fb-link img,
+        #tw-link img,
+        #pinterest-link img {
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
     }
   }
-}

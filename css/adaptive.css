@@ -1,6 +1,60 @@
-@media (max-width: 1200px) {
-    body {
-        background-color: blue;
+@media (max-width: 1150px) {
+    .contact {
+        text-align: center;
+        height: 100vh;
+    }
+
+    .contact-container {
+        padding: 0 !important;
+        margin: auto;
+    }
+
+    .contact-btn {
+        display: inline-block !important;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+.section-price .price-items {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .section-price .price-item {
+    width: 100%;
+    margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .skills-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .skills-item {
+        margin-bottom: 36px;
+    }
+
+    .section-portfolio .portfolio-photos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-gap: 20px; /* Отступ между изображениями */
+    }
+
+    .section-portfolio .portfolio-photo {
+        width: 100%;
+        text-align: center; /* Центрирование содержимого */
+        margin-bottom: 20px; /* Отступ между изображениями */
+    }
+
+    .section-portfolio .portfolio-photo img {
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+        max-height: 560px;
+        display: inline-block !important; /* Убираем ненужные пробелы под изображениями */
     }
 }
 
@@ -106,9 +160,55 @@
     .footer-inner .about,
     .footer-inner .soc-links {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
 
+}
 
+@media only screen and (max-width: 676px) {
+    .skills-items {
+        display: flex;
+        justify-content: center !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .skills-item {
+        margin-bottom: 36px;
+    }
 
 }
+
+/* Добавьте этот медиа-запрос в конец вашего CSS-кода */
+@media only screen and (max-width: 674px) {
+    .header .header-inner {
+        flex-wrap: wrap;
+        align-items: center; /* Центрирование элементов по вертикали */
+    }
+
+    .nav {
+        text-align: right;
+        width: 80%; /* Занимает всю доступную ширину */
+    }
+
+    .nav .nav_link {
+        display: block; /* Делаем ссылки блочными элементами */
+        margin-bottom: 10px; /* Добавляем маргин снизу для создания пространства между ссылками */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #email,
+    #phone,
+    #message {
+        max-width: 100%; /* Максимальная ширина 100% */
+        padding: 10px; /* При необходимости, уменьшите внутренний отступ */
+
+    }
+}
+
+
+
